@@ -1,0 +1,15 @@
+.allCards {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#card {
+    margin: auto;
+    margin-top: 20px;
+    height: 15rem;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
