@@ -8,34 +8,54 @@ function Cards() {
         <>
         <div className='allCards'>
             <div id='card'>
-                bitcoin
+                <div id='bitcoin'>
+                    bitcoin
+                </div>
             </div>
             <div id='card'>
-                ethereum
+                <div id='coin'>
+                    ethereum
+                </div>
             </div>
             <div id='card'>
-                solana
+                <div id='coin'>
+                    solana
+                </div>
             </div>
             <div id='card'>
-                dogwifhat
+                <div id='coin'>
+                    dogwifhat
+                </div>
             </div>
             <div id='card'>
-                avalanche
+                <div id='coin'>
+                    avalanche
+                </div>
             </div>
             <div id='card'>
-                doge
+                <div id='coin'>
+                    doge
+                </div>
             </div>
             <div id='card'>
-                polygon
+                <div id='coin'>
+                    polygon
+                </div>
             </div>
             <div id='card'>
-                near
+                <div id='coin'>
+                    near
+                </div>
             </div>
             <div id='card'>
-                nub
+                <div id='coin'>
+                    nubcat
+                </div>
             </div>
             <div id='card'>
-                paal
+                <div id='coin'>
+                    paal
+                </div>
             </div>
         </div>
         </>

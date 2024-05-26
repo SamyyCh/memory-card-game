@@ -2,14 +2,31 @@
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 #card {
+    background-color: white;
     margin: auto;
     margin-top: 20px;
     height: 15rem;
     width: 80%;
     border: 1px solid black;
     border-radius: 10px;
+    display: grid;
+    grid-template-rows: 8fr 1fr;
+}
+
+#card:hover {
+    box-shadow: 1px 1px 15px black;
+}
+
+#coin {
+    grid-row: 2;
+}
+
+#bitcoin {
+    background-image: url(../assets/Bitcoin.png);
+    background-size: contain;
+    grid-row: 2;
 }
