@@ -3,30 +3,70 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-bottom: 20px;
 }
 
 #card {
-    background-color: white;
+    background-color: #0C192B;
+    color: white;
+    font-weight: bold;
     margin: auto;
     margin-top: 20px;
     height: 15rem;
     width: 80%;
-    border: 1px solid black;
     border-radius: 10px;
     display: grid;
     grid-template-rows: 8fr 1fr;
+    padding: 5px;
 }
 
 #card:hover {
-    box-shadow: 1px 1px 15px black;
+    box-shadow: 0px 0px 10px white;
 }
 
-#coin {
-    grid-row: 2;
+#bitcoin, #ethereum, #tether, #solana, #avax, #link, #near, #usdc, #doge, #polygon {
+    background-size: cover;
+    border-radius: 8px;
+    background-position: center;
+    margin-bottom: 10px;
 }
 
 #bitcoin {
-    background-image: url(../assets/Bitcoin.png);
-    background-size: contain;
-    grid-row: 2;
+    background-image: url(../assets/bitcoin.png);
+}
+
+#ethereum {
+    background-image: url(../assets/ethereum.png);
+}
+
+#tether {
+    background-image: url(../assets/tether.png);
+}
+
+#solana {
+    background-image: url(../assets/solana.png);
+}
+
+#avax {
+    background-image: url(../assets/avax.png);
+}
+
+#link {
+    background-image: url(../assets/chainlink.png);
+}
+
+#near {
+    background-image: url(../assets/near.png);
+}
+
+#doge {
+    background-image: url(../assets/doge.png);
+}
+
+#polygon {
+    background-image: url(../assets/polygon.png);
+}
+
+#usdc {
+    background-image: url(../assets/usdc.png);
 }

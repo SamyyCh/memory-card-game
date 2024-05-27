@@ -4,59 +4,58 @@ import '../styles/card.css'
 function Cards() {
     const [card, setCard] = useState();
 
+    const shuffle = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1))
+            [array[i], array[j]] = [array[j], array[i]]
+        }
+        return array
+    }
+
     return (
         <>
         <div className='allCards'>
             <div id='card'>
-                <div id='bitcoin'>
-                    bitcoin
-                </div>
+                <div id='bitcoin'></div>
+                    Bitcoin
             </div>
             <div id='card'>
-                <div id='coin'>
-                    ethereum
-                </div>
+                <div id='ethereum'></div>
+                    Ethereum
             </div>
             <div id='card'>
-                <div id='coin'>
-                    solana
-                </div>
+                <div id='tether'></div>
+                    Tether
             </div>
             <div id='card'>
-                <div id='coin'>
-                    dogwifhat
-                </div>
+                <div id='solana'></div>
+                    Solana
             </div>
             <div id='card'>
-                <div id='coin'>
-                    avalanche
-                </div>
+                <div id='doge'></div>
+                    Dogecoin
             </div>
             <div id='card'>
-                <div id='coin'>
-                    doge
-                </div>
+                <div id='avax'></div>
+                    Avalanche
             </div>
             <div id='card'>
-                <div id='coin'>
-                    polygon
-                </div>
+                <div id='link'></div>
+                    Chainlink
             </div>
             <div id='card'>
-                <div id='coin'>
-                    near
-                </div>
+                <div id='polygon'></div>
+                    Polygon
             </div>
             <div id='card'>
-                <div id='coin'>
-                    nubcat
-                </div>
+                <div id='usdc'></div>
+                    USDC
             </div>
             <div id='card'>
-                <div id='coin'>
-                    paal
-                </div>
+                <div id='near'></div>
+                    Near
             </div>
+            
         </div>
         </>
     )
