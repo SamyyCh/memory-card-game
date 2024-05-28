@@ -14,7 +14,7 @@ const initialCards = [
     { id: 'near', name: 'Near' },
 ];
 
-function Cards() {
+function Cards({ onCardClick }) {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
@@ -29,7 +29,8 @@ function Cards() {
         return array;
     };
 
-    const handleCardClick = () => {
+    const handleCardClick = (cardId) => {
+        onCardClick(cardId);
         setCards(shuffle([...cards]));
     };
 
@@ -37,7 +38,7 @@ function Cards() {
         <>
             <div className='allCards'>
                 {cards.map((card, index) => (
-                    <div key={index} id='card' onClick={handleCardClick}>
+                    <div key={index} id='card' onClick={() => handleCardClick(card.id)}>
                         <div id={card.id}></div>
                         {card.name}
                     </div>
