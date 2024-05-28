@@ -1,65 +1,50 @@
-import { useState } from 'react'
-import '../styles/card.css'
+import { useState, useEffect } from 'react';
+import '../styles/card.css';
+
+const initialCards = [
+    { id: 'bitcoin', name: 'Bitcoin' },
+    { id: 'ethereum', name: 'Ethereum' },
+    { id: 'tether', name: 'Tether' },
+    { id: 'solana', name: 'Solana' },
+    { id: 'doge', name: 'Dogecoin' },
+    { id: 'avax', name: 'Avalanche' },
+    { id: 'link', name: 'Chainlink' },
+    { id: 'polygon', name: 'Polygon' },
+    { id: 'usdc', name: 'USDC' },
+    { id: 'near', name: 'Near' },
+];
 
 function Cards() {
-    const [card, setCard] = useState();
+    const [cards, setCards] = useState([]);
+
+    useEffect(() => {
+        setCards(shuffle([...initialCards]));
+    }, []);
 
     const shuffle = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1))
-            [array[i], array[j]] = [array[j], array[i]]
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
         }
-        return array
-    }
+        return array;
+    };
+
+    const handleCardClick = () => {
+        setCards(shuffle([...cards]));
+    };
 
     return (
         <>
-        <div className='allCards'>
-            <div id='card'>
-                <div id='bitcoin'></div>
-                    Bitcoin
+            <div className='allCards'>
+                {cards.map((card, index) => (
+                    <div key={index} id='card' onClick={handleCardClick}>
+                        <div id={card.id}></div>
+                        {card.name}
+                    </div>
+                ))}
             </div>
-            <div id='card'>
-                <div id='ethereum'></div>
-                    Ethereum
-            </div>
-            <div id='card'>
-                <div id='tether'></div>
-                    Tether
-            </div>
-            <div id='card'>
-                <div id='solana'></div>
-                    Solana
-            </div>
-            <div id='card'>
-                <div id='doge'></div>
-                    Dogecoin
-            </div>
-            <div id='card'>
-                <div id='avax'></div>
-                    Avalanche
-            </div>
-            <div id='card'>
-                <div id='link'></div>
-                    Chainlink
-            </div>
-            <div id='card'>
-                <div id='polygon'></div>
-                    Polygon
-            </div>
-            <div id='card'>
-                <div id='usdc'></div>
-                    USDC
-            </div>
-            <div id='card'>
-                <div id='near'></div>
-                    Near
-            </div>
-            
-        </div>
         </>
-    )
-
+    );
 }
 
-export default Cards
+export default Cards;
