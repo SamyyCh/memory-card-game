@@ -4,3 +4,22 @@
     grid-template-columns: 5fr 1fr;
     margin: 10px;
 }
+
+@media screen and (max-width: 600px) {
+    .header {
+        grid-template-columns: 2fr 1fr;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+
+    #instructions {
+        font-size: 10px;
+    }
+
+    #currentScore, #bestScore {
+        text-align: center;
+    }
+}

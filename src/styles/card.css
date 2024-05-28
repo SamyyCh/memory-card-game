@@ -70,3 +70,10 @@
 #usdc {
     background-image: url(../assets/usdc.png);
 }
+
+@media screen and (max-width: 600px) {
+    .allCards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
